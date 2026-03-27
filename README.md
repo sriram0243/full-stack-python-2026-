@@ -38,7 +38,14 @@ This repository contains a collection of beginner-friendly web projects built us
 * Form validation
 * Clean and simple UI
 * Built using **HTML & CSS**
+  
+##5 🎓 Student Name Entry System (Flask + MySQL)
 
+A simple web application built using Flask and MySQL that allows users to:
+
+Add student names
+Store data in a MySQL database
+View all stored student records
 ---
 
 ## 🛠️ Technologies Used
