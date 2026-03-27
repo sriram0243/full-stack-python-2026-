@@ -1,0 +1,30 @@
+body {
+    background-image:url("img.jpg");
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+    }
+form {
+    background: #ebe8e873;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+input {
+  display: block;         
+  margin-bottom: 15px;    
+  padding: 8px;           
+  width: 250px;           
+  border-radius: 5px;     
+  border: 1px solid #ccc; 
+}
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}

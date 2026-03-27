@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Breakdance Robot</title>
+
+<style>
+body {
+  text-align: center;
+  background: #000;
+  color: white;
+  font-family: Arial;
+}
+
+/* Container */
+#container {
+  margin-top: 100px;
+}
+
+/* Robot */
+.robot {
+  width: 120px;
+  margin: auto;
+  transform-origin: center;
+}
+
+/* Head */
+.head {
+  width: 80px;
+  height: 60px;
+  background: cyan;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* Body */
+.body {
+  width: 120px;
+  height: 130px;
+  background: #00cc99;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Arms */
+.arm {
+  width: 20px;
+  height: 90px;
+  background: cyan;
+  position: absolute;
+  top: 10px;
+  transform-origin: top;
+}
+
+.left-arm { left: -25px; }
+.right-arm { right: -25px; }
+
+/* Legs */
+.leg {
+  width: 20px;
+  height: 90px;
+  background: cyan;
+  position: absolute;
+  bottom: -90px;
+  transform-origin: top;
+}
+
+.left-leg { left: 25px; }
+.right-leg { right: 25px; }
+
+/* 🔥 BREAKDANCE MODE */
+
+/* Full spin */
+.dance .robot {
+  animation: spin 0.8s linear infinite;
+}
+
+/* Head spin effect */
+.dance .head {
+  animation: headspin 0.5s linear infinite;
+}
+
+/* Arms freestyle */
+.dance .left-arm {
+  animation: armCrazy 0.3s infinite;
+}
+.dance .right-arm {
+  animation: armCrazy 0.3s infinite reverse;
+}
+
+/* Legs kick */
+.dance .left-leg {
+  animation: legKick 0.4s infinite;
+}
+.dance .right-leg {
+  animation: legKick 0.4s infinite reverse;
+}
+
+/* Keyframes */
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes headspin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes armCrazy {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(120deg); }
+  50% { transform: rotate(-60deg); }
+  75% { transform: rotate(180deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes legKick {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(90deg); }
+  100% { transform: rotate(-30deg); }
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.start { background: limegreen; color: white; }
+.stop { background: red; color: white; }
+
+</style>
+</head>
+
+<body>
+
+<h1>🤖 Breakdance Robot</h1>
+
+<div id="container">
+  <div class="robot" id="robot">
+    <div class="head"></div>
+    <div class="body">
+      <div class="arm left-arm"></div>
+      <div class="arm right-arm"></div>
+      <div class="leg left-leg"></div>
+      <div class="leg right-leg"></div>
+    </div>
+  </div>
+</div>
+
+<button class="start" onclick="startDance()">Start Breakdance</button>
+<button class="stop" onclick="stopDance()">Stop</button>
+
+<script>
+function startDance() {
+  document.getElementById("container").classList.add("dance");
+}
+
+function stopDance() {
+  document.getElementById("container").classList.remove("dance");
+}
+</script>
+
+</body>
+</html>
